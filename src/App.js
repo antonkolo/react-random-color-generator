@@ -90,7 +90,7 @@ export default function App() {
         <ColorText>Generated Color: {color}</ColorText>
       </ColorBox>
       <GenerateButton onClick={() => setColor(randomColor())}>
-        GENERATE
+        Generate
       </GenerateButton>
     </Main>
   );
