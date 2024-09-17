@@ -21,7 +21,19 @@ const Title = styled.h1`
   margin-bottom: 0;
 `;
 
+const ColorText = styled.p`
+  font-family:
+    Madimi One,
+    sans-serif;
+
+  font-size: 28px;
+  color: #f1f3ff;
+`;
+
 const ColorBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   margin-top: 24px;
   max-width: 1060px;
@@ -74,7 +86,9 @@ export default function App() {
   return (
     <Main>
       <Title>Random Color Generator</Title>
-      <ColorBox $bgcolor={color} />
+      <ColorBox $bgcolor={color}>
+        <ColorText>Generated Color: {color}</ColorText>
+      </ColorBox>
       <GenerateButton onClick={() => setColor(randomColor())}>
         GENERATE
       </GenerateButton>
