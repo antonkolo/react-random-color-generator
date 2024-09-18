@@ -19,6 +19,10 @@ const Title = styled.h1`
   text-align: center;
   margin-top: 24px;
   margin-bottom: 0;
+  /* shadow */
+  /* text-shadow: 0 10px 5px; */
+  text-shadow: ${(props) => `0 5px 3px ${props.$shadowColor}`};
+  transition: text-shadow 300ms ease-in-out;
 `;
 
 const ColorBox = styled.div`
@@ -82,7 +86,7 @@ export default function App() {
 
   return (
     <Main>
-      <Title>Random Color Generator</Title>
+      <Title $shadowColor={color}>Random Color Generator</Title>
       <ColorBox $bgcolor={color}>Generated Color: {color}</ColorBox>
       <GenerateButton onClick={() => setColor(randomColor())}>
         Generate
