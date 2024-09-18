@@ -22,22 +22,28 @@ const Title = styled.h1`
 `;
 
 const ColorBox = styled.div`
+  /* font styles */
   font-family: Danfo, sans-serif;
   font-size: 32px;
+  /* layout */
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  margin-top: 24px;
+  margin: 24px 20px 0px 20px;
+
+  /* size styles */
   max-width: 1060px;
   max-height: 600px;
-  min-width: 150px; /* Minimum width before scroll or other behavior */
-  min-height: 150px; /* Minimum height before scroll or other behavior */
-  width: 100%; /* Take up to 100% of the flex parent width */
+  min-width: 150px;
+  min-height: 150px;
+  width: 100%;
   height: 100%;
-  background-color: ${(props) => props.$bgcolor};
   border: 2px solid #000;
   border-radius: 40px;
+  /* color styles */
+  background-color: ${(props) => props.$bgcolor};
+  transition: background-color 300ms ease-in-out;
 `;
 
 const GenerateButton = styled.button`
