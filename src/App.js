@@ -80,12 +80,20 @@ const GenerateButton = styled.button`
   }
 `;
 
+const PaintSplash = styled.svg`
+  width: 10%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+`;
+
 export default function App() {
   // state declaration
   const [color, setColor] = useState('#fff');
 
   return (
     <Main>
+      <PaintSplash src="./src/img/303242.svg" fill="#000" />
       <Title $shadowColor={color}>Random Color Generator</Title>
       <ColorBox $bgcolor={color}>Generated Color: {color}</ColorBox>
       <GenerateButton onClick={() => setColor(randomColor())}>
